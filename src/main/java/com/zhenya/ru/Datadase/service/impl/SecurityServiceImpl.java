@@ -5,7 +5,7 @@ import com.zhenya.ru.Datadase.exception.InvalidCredentialsException;
 import com.zhenya.ru.Datadase.exception.NotValidArgumentException;
 import com.zhenya.ru.Datadase.models.Person;
 import com.zhenya.ru.Datadase.repository.PersonRepository;
-import com.zhenya.ru.Datadase.secutity.JwtUtil;
+import com.zhenya.ru.Datadase.security.JwtUtil;
 import com.zhenya.ru.Datadase.service.SecurityService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;

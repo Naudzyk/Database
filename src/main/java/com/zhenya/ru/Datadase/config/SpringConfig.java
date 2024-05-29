@@ -1,6 +1,6 @@
 package com.zhenya.ru.Datadase.config;
 
-import com.zhenya.ru.Datadase.secutity.JwtFilter;
+import com.zhenya.ru.Datadase.security.JwtFilter;
 import com.zhenya.ru.Datadase.service.impl.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

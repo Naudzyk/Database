@@ -1,4 +1,4 @@
-package com.zhenya.ru.Datadase.secutity;
+package com.zhenya.ru.Datadase.security;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import io.jsonwebtoken.ExpiredJwtException;

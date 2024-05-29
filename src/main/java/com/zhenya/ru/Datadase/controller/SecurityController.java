@@ -3,7 +3,7 @@ package com.zhenya.ru.Datadase.controller;
 import com.zhenya.ru.Datadase.dto.AuthDTO;
 import com.zhenya.ru.Datadase.dto.PersonDTO;
 import com.zhenya.ru.Datadase.repository.PersonRepository;
-import com.zhenya.ru.Datadase.secutity.JwtUtil;
+import com.zhenya.ru.Datadase.security.JwtUtil;
 import com.zhenya.ru.Datadase.service.SecurityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

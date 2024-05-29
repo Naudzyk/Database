@@ -1,4 +1,4 @@
-package com.zhenya.ru.Datadase.secutity;
+package com.zhenya.ru.Datadase.security;
 
 import com.zhenya.ru.Datadase.service.impl.PersonDetailsImpl;
 import io.jsonwebtoken.io.Decoders;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import io.jsonwebtoken.*;
 
 import javax.crypto.SecretKey;
+import javax.xml.datatype.Duration;
 import java.util.Date;
 
 @Component
@@ -20,10 +21,12 @@ public class JwtUtil {
     private int lifetime;
 
     public String generateToken(Authentication authentication){
+        Date issuedDate = new Date();
+        Date expiredDate = new Date(issuedDate.getTime() + lifetime);
         PersonDetailsImpl personDetails = (PersonDetailsImpl) authentication.getPrincipal();
         return
-                Jwts.builder().setSubject((personDetails.getUsername())).setIssuedAt(new Date())
-                        .setExpiration(new Date((new Date().getTime() + lifetime)))
+                Jwts.builder().setSubject((personDetails.getUsername())).setIssuedAt(issuedDate)
+                        .expiration(expiredDate)
                         .signWith(SignatureAlgorithm.HS256,secret)
                         .compact();
     }
